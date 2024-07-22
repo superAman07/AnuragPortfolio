@@ -237,12 +237,27 @@
     <script src="assets/js/meyawo.js"></script>
     <!-- projects js -->
      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-                const videos = document.querySelectorAll('.project-video');
-                videos.forEach((video, index) => {
-                video.style.animationDelay = `${index * 0.2}s`;
-            });
+            document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+        
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            };
+        
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+        
+            const section = document.querySelector('#projects');
+            observer.observe(section);
         });
+
      </script>
 </body>
 
