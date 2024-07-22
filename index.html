@@ -27,7 +27,7 @@
                     <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
+                    <a class="link" href="#projects">Projects</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#testmonial">Testmonial</a>
@@ -96,61 +96,35 @@
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->
-
-    <!-- service section -->
-    <section>
-        <h2>Editing & VFX Skills</h2>
-    </section>
-
-    <!--  -->
     
 
-    <!-- portfolio section -->
-    <!-- <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                    <p class="font-weight-normal">Category: Web Templates</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                    <p class="font-weight-normal">Category: Web Templates</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                    <p class="font-weight-normal">Category: Web Templates</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
+    <!-- project section -->
+    <section id="projects" class="projects-section">
+        <h2 class="projects-title">Editing & VFX Skills</h2>
+        <div class="projects-video-container">
+            <div class="project-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uHYOwws2BP8?si=lp50iALzY8L06DfE" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+            <div class="project-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0BSL1kDs0JU?si=OJD_5WOMvVztpD7M" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+            <div class="project-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wMRYPE0f7rk?si=ewWF4cQ1zdsokYfT" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
             </div>
         </div>
-    </section>   -->
-    <!-- end of pricing section -->
+    </section>
+
+
+
+
+
+
     <!-- section -->
     <section class="section-sm bg-primary">
         <!-- container -->
@@ -261,7 +235,15 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
+    <!-- projects js -->
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const videos = document.querySelectorAll('.project-video');
+                videos.forEach((video, index) => {
+                video.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+     </script>
 </body>
 
 </html>
