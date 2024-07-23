@@ -24,23 +24,20 @@
                     <a class="link" href="#home">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#about">About</a>
+                    <a class="link" href="#projects">Projects</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#projects">Projects</a>
+                    <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#testmonial">Testmonial</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#blog">Blog</a>
+                    <a class="link" href="#hire">Hire</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
                 </li>
-                <!-- <li class="item ml-md-3">
-                    <a href="components.html" class="btn btn-primary">Components</a>
-                </li> -->
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
@@ -48,7 +45,8 @@
                 </div>
             </a>
         </div>
-    </nav><!-- End of Page Navbar -->
+    </nav>
+    <!-- End of Page Navbar -->
 
     <!-- page header -->
     <header id="home" class="header"> 
@@ -62,44 +60,42 @@
                 <span class="down">I am Anurag Pal</span>
             </h1>
             <p class="header-subtitle">CONTENT CREATOR || VFX ARTIST || VIDEO EDITOR</p>
-            <div class="scroll-down">
+            <div class="scroll-down" id="scroll-down">
                 <span>Scroll down to see more</span>
             </div>
         </div>
     </header>
+    <!-- for scrolling fx -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollButton = document.querySelector('.scroll-down');
+    
+        scrollButton.addEventListener('click', () => { 
+            const targetSection = document.querySelector('#projects'); 
+    
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    </script>
+    
     <!-- end of page header -->
 
-    <!-- about section -->
-    <section class="section pt-0" id="about">
-        <!-- container -->
-        <div class="container text-center">
-            <!-- about wrapper -->
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/man.jpg" class="about-img"
-                        alt="">
-                </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut
-                        fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam
-                        impedit iure nemo a iste
-                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo
-                        esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis
-                        culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum
-                        expedita aliquid! Debitis, nam!
-                    </p>
-                    <!-- <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button> -->
-                </div>
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
-    
+
+    <div class="dots-separator">
+        <div class="dots">...</div>
+    </div>
+
 
     <!-- project section -->
     <section id="projects" class="projects-section">
+        <br>
+        <br>
         <h2 class="projects-title">Editing & VFX Skills</h2>
         <div class="projects-video-container">
             <div class="project-video">
@@ -121,26 +117,77 @@
     </section>
 
 
+    <div class="dots-separator">
+        <div class="dots">...</div>
+    </div>
+
+    <!-- about section -->
+    <section class="sectionn pt-0" id="about"> 
+        <br>
+        <div class="containerr text-center"> 
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/man.jpg" class="about-img"
+                        alt="">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am a dedicated content creator specializing in VFX artistry and video editing. With a passion for visual storytelling and a keen eye for detail, I have completed numerous projects that showcase my expertise in these fields. Whether it's crafting immersive VFX scenes or editing compelling videos, I bring creativity and technical skill to every project I undertake.
+                        <br>
+                        In addition to my professional work, I run a YouTube channel where I share a variety of my VFX and editing projects. Through my channel, I aim to inspire and educate others, demonstrating the power of visual effects and the art of video editing. Join me on my journey as I continue to push the boundaries of creativity and bring imaginative concepts to life.
+                    </p>
+                 </div>
+            </div> 
+        </div> 
+    </section>  
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+        
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            };
+        
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+        
+            const section = document.querySelector('#about');
+            observer.observe(section);
+        });
+        
+    </script>
 
 
+    <div class="dots-separator">
+        <div class="dots">...</div>
+    </div>
 
-
-    <!-- section -->
-    <section class="section-sm bg-primary">
-        <!-- container -->
+    <!--hire section -->
+    <section class="section-sm bg-primary" id="hire">
         <div class="container text-center text-sm-left">
-            <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
                     <h6 class="title text-light">Want to work with me?</h6>
                     <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
-                    <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+                    <a href="mailto:anuragpal63866@gmail.com">
+                        <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+                    </a>
                 </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
+            </div>
+        </div>  
+    </section> 
+
 
     <!-- testimonial section -->
     <!-- <section class="section" id="testmonial">
@@ -184,6 +231,8 @@
 
     <!-- contact section -->
     <section class="section" id="contact">
+        <br>
+        <br>
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
@@ -204,9 +253,13 @@
                         <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
                     </div>
                 </div>
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
+            </form>
+        </div>
+    </section> 
+
+    <div class="dots-separator">
+        <div class="dots">...</div>
+    </div>
 
     <!-- footer -->
     <div class="container">
@@ -224,7 +277,8 @@
                 <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
             </div>
         </footer>
-    </div> <!-- end of page footer -->
+    </div> 
+    <!-- end of page footer -->
 
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
