@@ -4560,7 +4560,7 @@ input[type="button"].btn-block {
   padding: 0.8rem 1rem;
 }
 
-.navbar > .container,
+/* .navbar > .container,
 .navbar > .container-fluid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4577,7 +4577,7 @@ input[type="button"].btn-block {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
+} */
 
 .navbar-brand {
   display: inline-block;
@@ -11478,14 +11478,6 @@ pre .code {
   width: 300px;
 }
 
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-/* hamburger */
 /*
    * Elastic
    */
@@ -11602,7 +11594,7 @@ pre .code {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -12274,7 +12266,7 @@ pre .code {
 }
 
 .about-img-holder .about-img {
-  width: 100%;
+  
   margin-bottom: 15px;
 }
 
@@ -12460,12 +12452,12 @@ pre .code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .project-video {
-  width: calc(33.333% - 20px);
-  margin-bottom: 20px;
+  width: calc(30% - 40px); /* Adjusted width to make the videos smaller */
+  margin-bottom: 40px; /* Increased margin for more spacing below each video */
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -12473,7 +12465,7 @@ pre .code {
 
 .project-video iframe {
   width: 100%;
-  height: 315px;
+  height: 250px; /* height adjustment*/
   border-radius: 10px;
 }
 
@@ -12596,6 +12588,8 @@ pre .code {
 
 .about-img-holder {
   margin-bottom: 20px;
+  width: 350px;
+  height: 350px; 
 }
 
 .about-img {
